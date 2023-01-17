@@ -10,14 +10,16 @@ public class C04_BolmeIslemSonucunuCarpmaileBulma {
         //bu işlemi kullanıcı q ya basıncaya kadar devam ettirin
         Scanner scan=new Scanner(System.in);
         boolean devamEdelimMi=true;
+        int bolunen=1;
+        int bolen=1;
         do {
 
             System.out.println("Lütfen bölme işlemi için iki sayi giriniz: \n" +
                     "bitirmek için Q ya basın");
             try {
-                int bolunen= scan.nextInt();
+                bolunen= scan.nextInt();
                 System.out.println("Lütfen bölecek sayiyi giriniz: ");
-                int bolen=scan.nextInt();
+                bolen=scan.nextInt();
                 bolumSonucunuYazdir(bolunen,bolen);
 
             } catch (InputMismatchException e) {
@@ -30,7 +32,7 @@ public class C04_BolmeIslemSonucunuCarpmaileBulma {
 
 
             }
-            int bolen=scan.nextInt();
+            bolen=scan.nextInt();
             int sonuc=0;
 
 
@@ -61,7 +63,7 @@ public class C04_BolmeIslemSonucunuCarpmaileBulma {
 
         int bolumsonucu=1;
 
-        while (bolumsonucu*bolen<bolunen){
+        while (bolumsonucu*bolen<=bolunen){
             bolumsonucu++;
         }
         bolumsonucu--;
